@@ -1,0 +1,243 @@
+/* 🌟 Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdf6ec; /* Warm bakery background */
+    color: #5a3e36; /* Dark brown text */
+}
+
+/* 🍞 Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    background-color: #f4a900; /* Warm golden color */
+    padding: 15px 30px;
+}
+
+.navbar .logo h1 {
+    color: white;
+    font-size: 24px;
+    margin: 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-right: 90px;
+}
+
+.nav-links a:hover {
+    color: #222; 
+}
+
+/* 🍰 Banner Section */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    /* background: url('https://source.unsplash.com/1600x900/?bakery,cakes') no-repeat center/cover; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* 🔳 Dark Overlay */
+.banner::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark semi-transparent overlay */
+}
+
+/* 📜 Text on Banner */
+.banner-text {
+    position: relative;
+    background: rgba(0, 0, 0, 0.6); /* Dark but slightly transparent */
+    padding: 10px 30px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.banner-text h1 {
+    font-size: 36px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+}
+
+/* 🏪 About Section */
+.about-container {
+    max-width: 1100px;
+    margin: 50px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/* 📖 About Text */
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 28px;
+    color: #d2691e;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* 🍪 About Image */
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-image img:hover {
+    transform: scale(1.05);
+}
+
+/* 🍩 Services & Hours Section */
+.services-hours {
+    max-width: 1100px;
+    margin: 50px auto;
+    display: flex;
+    gap: 40px;
+}
+
+.services, .hours {
+    flex: 1;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 🕒 Business Hours */
+.hours ul, .services ul {
+    list-style: none;
+    padding: 0;
+}
+
+.hours ul li, .services ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+/* 🏆 Icon for Each Service */
+.services ul li::before {
+    content: "✔";
+    color: #f4a900;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* 🕒 Icon for Hours */
+.hours ul li::before {
+    content: "🕒";
+    position: absolute;
+    left: 0;
+    color: #d2691e;
+    font-weight: bold;
+}
+
+/* 📜 Footer */
+.footer {
+    text-align: center;
+    background-color: #222;
+    color: white;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.footer-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #f4a900;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+
+    .services-hours {
+        flex-direction: column;
+    }
+}
+
+
+.logo img {
+    height: 80px; /* Adjust size */
+    width: 100%;
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.3)); /* Adds a slight shadow */
+}
+

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Faith Confectionery</title>
+    
+    <link rel="stylesheet" href="styles/contact.css"> <!-- Contact-specific styles -->
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo.png" alt="Faith Confectionery Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <!-- <li><a href="order.html">Order</a></li> -->
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contact Us Container -->
+    <div class="contact-us-container">
+        <h1>Contact <span>Us</span></h1>
+
+        <div class="contact-details">
+            <!-- Left Section: Contact Info -->
+            <div class="contact-info">
+                <h2>Get In Touch With Us</h2>
+                <p>
+                    <strong>Phone:</strong> 
+                    <a href="https://wa.me/256773491110" target="_blank" rel="noopener noreferrer" class="whatsapp-link">
+                       256773491110 
+                    </a>
+                </p>
+                <p><strong>Instagram:</strong> @faiths_confectinery</p>
+                <p><strong>Facebook:</strong> @faiths_confectinery</p>
+                <p><strong>Address:</strong> Kyanja Ring Road-Kampala</p>
+                <p><strong>Email:</strong> faithconfectionery256@gmail.com</p>
+            </div>
+
+            <!-- Right Section: Contact Form -->
+            <div class="contact-form">
+                <form id="contact-form">
+                    <input
+                        type="text"
+                        placeholder="Your Name"
+                        name="name"
+                        required
+                        aria-label="Name"
+                    />
+                    <input
+                        type="email"
+                        placeholder="Your Email"
+                        name="email"
+                        required
+                        aria-label="Email"
+                    />
+                    <input
+                        type="text"
+                        placeholder="Your Subject"
+                        name="subject"
+                        aria-label="Subject"
+                    />
+                    <textarea
+                        placeholder="Your Message"
+                        name="message"
+                        rows="5"
+                        required
+                        aria-label="Message"
+                    ></textarea>
+                    <button type="submit" aria-label="Submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Map Section -->
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31586.269138372133!2d32.58366116728316!3d0.3315507201654419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbb481d319849%3A0x6bc758c3a7c8962b!2sKyaliwajjala!5e0!3m2!1sen!2sug!4v1690000000000!5m2!1sen!2sug"
+                width="100%"
+                height="300"
+                style="border: 0;"
+                allowfullscreen=""
+                loading="lazy"
+                title="Map"
+            ></iframe>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2023 Faith Confectionery. All rights reserved.</p>
+        <ul class="footer-links">
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+    </footer>
+
+    <!-- JavaScript for Form Submission -->
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formData = {
+                name: document.querySelector('input[name="name"]').value,
+                email: document.querySelector('input[name="email"]').value,
+                subject: document.querySelector('input[name="subject"]').value || "No Subject",
+                message: document.querySelector('textarea[name="message"]').value
+            };
+
+            const whatsappMessage = `Contact Form Submission:\n\nName: ${formData.name}\nEmail: ${formData.email}\nSubject: ${formData.subject}\nMessage: ${formData.message}`;
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+            const phoneNumber = "256773491110";
+            const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+            window.open(whatsappLink, "_blank");
+        });
+    </script>
+</body>
+</html>

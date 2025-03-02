@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order - Delightful Bakery</title>
+    <link rel="stylesheet" href="styles/order.css">
+    
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo.png" alt="Faith Confectionery Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <!-- <li><a href="order.html">Order</a></li> -->
+        </ul>
+    </nav>
+
+    <!-- Order Section -->
+    <section class="order-container">
+        <h2>Place Your Order</h2>
+
+        <form id="order-form" class="order-form">
+            <!-- Customer Info Section -->
+            <div class="form-input">
+                <label for="name">Name:</label>
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name"
+                    required
+                />
+            </div>
+
+            <div class="form-input">
+                <label for="email">Email:</label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                />
+            </div>
+
+            <div class="form-input">
+                <label for="phone">Phone Number:</label>
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Enter your phone number"
+                    required
+                />
+            </div>
+
+            <!-- Category Selection -->
+            <div class="form-input">
+                <label for="product">Choose a Product:</label>
+                <select id="product" required>
+                    <option value="" disabled selected>Select a product</option>
+                    <!-- Cakes -->
+                    <option value="Butter Cake|100,000 SHS">Butter Cake - 100,000 SHS</option>
+                    <option value="Chocolate Cake|70,000 SHS">Chocolate Cake - 70,000 SHS</option>
+                    <option value="Red Velvet Cake|70,000 SHS">Red Velvet Cake - 70,000 SHS</option>
+                    <option value="Carrot Cake|50,000 SHS">Carrot Cake - 50,000 SHS</option>
+                    <option value="Cheesecake|50,000 SHS">Cheesecake - 50,000 SHS</option>
+                    <option value="Cup Cakes|25,000 SHS">Cup Cakes - 25,000 SHS</option>
+                    <option value="Lemon Cake|30,000 SHS">Lemon Cake - 30,000 SHS</option>
+                    <option value="Coffee Cake|50,000 SHS">Coffee Cake - 50,000 SHS</option>
+                    <!-- Muffins -->
+                    <option value="Blueberry Muffin|5000 SHS">Blueberry Muffin - 5000 SHS</option>
+                    <option value="Chocolate Chip Muffin|5000 SHS">Chocolate Chip Muffin - 5000 SHS</option>
+                    <option value="Banana Muffin|5000 SHS">Banana Muffin - 5000 SHS</option>
+                    <option value="Bran Muffin|5000 SHS">Bran Muffin - 5000 SHS</option>
+                    <!-- Doughnuts -->
+                    <option value="Glazed Doughnut|2000 SHS">Glazed Doughnut - 2000 SHS</option>
+                    <option value="Chocolate Doughnut|2000 SHS">Chocolate Doughnut - 2000 SHS</option>
+                    <option value="Sugar-Coated Doughnut|2000 SHS">Sugar-Coated Doughnut - 2000 SHS</option>
+                    <option value="Jam-Filled Doughnut|2000 SHS">Jam-Filled Doughnut - 2000 SHS</option>
+                </select>
+            </div>
+
+            <!-- Display Selected Product and Price -->
+            <div class="form-input" id="selected-product-display" style="display: none;">
+                <p>Selected Product: <span id="selected-product"></span></p>
+                <p>Price: <span id="selected-price"></span></p>
+            </div>
+
+            <!-- Special Instructions -->
+            <div class="form-input">
+                <label for="special-instructions">Special Instructions:</label>
+                <textarea
+                    id="special-instructions"
+                    placeholder="Add any special instructions here..."
+                ></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn" style="background-color: #d9534f; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 1rem; font-weight: bold;">
+                Submit Order
+            </button>
+            
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2023 Faith Confectionery. All rights reserved.</p>
+        <ul class="footer-links">
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+    </footer>
+
+    <!-- JavaScript for Form Handling -->
+    <script>
+        document.getElementById('order-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const productSelect = document.getElementById('product').value;
+            const specialInstructions = document.getElementById('special-instructions').value || 'None';
+
+            if (!productSelect) {
+                alert("Please select a product before submitting your order.");
+                return;
+            }
+
+            const [productName, price] = productSelect.split('|');
+            const message = `Hello, I would like to place an order. Here are the details:\n\n` +
+                `Name: ${name}\n` +
+                `Email: ${email}\n` +
+                `Phone: ${phone}\n` +
+                `Product: ${productName}\n` +
+                `Price: ${price}\n` +
+                `Special Instructions: ${specialInstructions}`;
+
+            const phoneNumber = "256773491110";
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, "_blank");
+        });
+
+        document.getElementById('product').addEventListener('change', function() {
+            const [productName, price] = this.value.split('|');
+            const display = document.getElementById('selected-product-display');
+            document.getElementById('selected-product').textContent = productName;
+            document.getElementById('selected-price').textContent = price;
+            display.style.display = 'block';
+        });
+    </script>
+</body>
+</html>

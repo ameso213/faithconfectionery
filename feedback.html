@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback & Testimonials</title>
+    <link rel="stylesheet" href="styles/feed.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo.png" alt="Faith Confectionery Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <!-- <li><a href="order.html">Order</a></li> -->
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- Testimonials Section -->
+        <div class="testimonials-section">
+            <h2>TESTIMONIALS</h2>
+            <p>What people say about us</p>
+            <div class="testimonials">
+                <div class="testimonial-card">
+                    <!-- <img src="./images/2.avif" alt="Customer 1" class="testimonial-image"> -->
+                    <p class="testimonial-text">
+                        "The first time I ordered my baby's baby shower cake from Faith
+                        Confectionery, it was delivered on time, and since then, I refer
+                        everyone to this bakery." – <strong>Betty</strong>
+                    </p>
+                    <p class="testimonial-rating">★★★</p>
+                </div>
+                <div class="testimonial-card">
+                    <!-- <img src="./images/4.avif" alt="Customer 2" class="testimonial-image"> -->
+                    <p class="testimonial-text">
+                        "Faith Confectionery prepares the healthiest and most delicious
+                        cakes, and as a doctor, I prefer ordering all my event cakes from
+                        there." – <strong>Dr. Khalid</strong>
+                    </p>
+                    <p class="testimonial-rating">★★★★★</p>
+                </div>
+                <div class="testimonial-card">
+                    <!-- <img src="./images/5.jpg" alt="Customer 3" class="testimonial-image"> -->
+                    <p class="testimonial-text">
+                        "I always buy my breakfast from Faith Confectionery because their
+                        prices are affordable for a student like me." – <strong>Doreen</strong>
+                    </p>
+                    <p class="testimonial-rating">★★★★★</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feedback Form Section -->
+<!-- Feedback Form Section -->
+<div class="feedback-form-container" style="width: 45%; padding: 30px; background-color: white; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); text-align: center; margin-top: 130px;">
+    <h2 style="color: #f9de70; text-transform: uppercase; margin-bottom: 10px;">Feedback</h2>
+    <form id="feedback-form" onsubmit="submitFeedback(event)" style="text-align: left;">
+        <label for="name" style="display: block; margin-bottom: 5px; font-weight: bold;">Name</label>
+        <input type="text" id="name" placeholder="Your Name" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px;">
+        
+        <label for="email" style="display: block; margin-bottom: 5px; font-weight: bold;">E-mail Address</label>
+        <input type="email" id="email" placeholder="Your Email" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px;">
+        
+        <label for="subject" style="display: block; margin-bottom: 5px; font-weight: bold;">Subject</label>
+        <input type="text" id="subject" placeholder="Subject" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px;">
+        
+        <label for="message" style="display: block; margin-bottom: 5px; font-weight: bold;">Message</label>
+        <textarea id="message" placeholder="Your Message" required style="width: 100%; padding: 10px; height: 100px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px; resize: none;"></textarea>
+        
+        <button type="submit" class="submit-button" style="background-color: #f9de70; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px; font-size: 16px; font-weight: bold; width: 100%; transition: background 0.3s ease-in-out, transform 0.2s;">Submit</button>
+    </form>
+</div>
+
+
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2023 Faith Confectionery. All rights reserved.</p>
+        <ul class="footer-links">
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+    </footer>
+
+    <!-- JavaScript for Feedback Form -->
+    <script>
+        function submitFeedback(event) {
+            event.preventDefault();
+
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let subject = document.getElementById("subject").value;
+            let message = document.getElementById("message").value;
+
+            let whatsappMessage = `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`;
+            let encodedMessage = encodeURIComponent(whatsappMessage);
+
+            let phoneNumber = "256773491110";
+            let whatsappLink = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+            window.open(whatsappLink, "_blank");
+        }
+    </script>
+
+</body>
+</html>

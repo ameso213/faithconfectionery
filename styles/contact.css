@@ -1,0 +1,215 @@
+/* Contact Us Container */
+.contact-us-container {
+    padding: 20px;
+    background-color: #fdf6ec; /* Matches landing-container from home.css */
+}
+
+/* Heading */
+.contact-us-container h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #4a2c2a; /* Consistent with previous theme */
+}
+
+.contact-us-container h1 span {
+    color: #d9534f;
+}
+
+/* Contact Details Section */
+.contact-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Contact Info Section */
+.contact-info {
+    position: relative;
+    padding: 20px;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 38%;
+    height: 300px;
+    right: -70px; /* Matches your CSS */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    /* Background Image with Low Opacity */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/image.jpeg") center/cover no-repeat;
+}
+
+/* Ensuring Content is Readable */
+.contact-info h2,
+.contact-info p {
+    position: relative;
+    font-size: 1rem;
+    font-weight: 900;
+    z-index: 2;
+}
+
+.contact-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+.contact-info a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.whatsapp-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #25D366; /* WhatsApp green */
+    font-weight: bold;
+}
+
+.whatsapp-icon {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.whatsapp-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Contact Form Section */
+.contact-form {
+    width: 40%;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+}
+
+.contact-form form input,
+.contact-form form textarea {
+    width: 96%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    color: #6d4c41;
+}
+
+.contact-form form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.contact-form button:hover {
+    background-color: #c9302c; /* Darker red on hover */
+}
+
+/* Map Container */
+.map-container {
+    margin-top: 40px;
+}
+
+.map-container iframe {
+    border-radius: 10px;
+    width: 100%;
+    height: 300px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    background-color: #222;
+    color: white;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.footer-links li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #f4a900;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    background-color: #f4a900;
+    padding: 15px 30px;
+}
+
+.navbar .logo h1 {
+    color: white;
+    font-size: 24px;
+    margin: 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    margin-right: 90px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #222;
+}
+
+
+.logo img {
+    height: 80px; /* Adjust size */
+    width: 100%;
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.3)); /* Adds a slight shadow */
+}
+

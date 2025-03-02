@@ -1,0 +1,141 @@
+/* Order Container */
+.order-container {
+    padding: 50px 30px;
+    text-align: center;
+    background-color: #f9e1cc;
+}
+
+.order-container h2 {
+    font-size: 30px;
+    color: #4a2c2a;
+    margin-bottom: 20px;
+}
+
+/* Order Form */
+.order-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-input {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-input label {
+    font-size: 16px;
+    color: #4a2c2a;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-input input,
+.form-input select,
+.form-input textarea {
+    width: 98%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #6d4c41;
+}
+
+.form-input textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-input p {
+    font-size: 14px;
+    color: #6d4c41;
+    margin: 5px 0;
+}
+
+
+/* Footer */
+.footer {
+    text-align: center;
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.footer-links li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #f4a900;
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4a900;
+    padding: 15px 30px;
+}
+
+.navbar .logo h1 {
+    color: white;
+    font-size: 24px;
+    margin: 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    margin-right: 90px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #222;
+}
+
+
+.logo img {
+    height: 80px; /* Adjust size */
+    width: 100%;
+    filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.3)); /* Adds a slight shadow */
+}
+
